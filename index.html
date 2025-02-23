@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="shortcut icon" href="image/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css.map">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+
+    <nav class="container navbar navbar-expand-lg navbar-light p-4 m-auto">
+        <a class="navbar-brand d-flex align-items-center" href="">
+            <img src="image/logo.png" class="w-25">
+            <h6 class=" ps-2 m-3 text-center mt-3 text-white ">Weather<br>Forecasting</h6>
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="tabs navbar-nav ms-auto d-flex justify-content-between">
+            <a class="nav-item nav-link active pe-5 text-white" href="index.html">Home</a>
+            <a class="nav-item nav-link active pe-5 text-white" href="#">News</a>
+            <a class="nav-item nav-link active pe-5 text-white" href="#">Live Cameras</a>
+            <a class="nav-item nav-link active pe-5 text-white" href="#">Photos</a>
+            <a class="nav-item nav-link active text-white" href="#">Contact</a>
+          </div>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="input d-flex justify-content-center align-items-center m-auto pt-5 position-relative w-75">
+            <input id="countryEntered" type="text" placeholder="Find your Location...." class="form form-control w-100 rounded-5 p-3 position-absolute">
+            <input id="searchButton" type="button" value="Find" class="btn rounded-5 p-2 position-absolute">
+        </div>
+
+        <div class="container content-types w-75 m-auto">
+            <div class="row weather-table mt-5 rounded-5">
+
+                <div class="forecastInfo col-lg-4 col-sm-12" id="displaying">
+                    <div class="header d-flex justify-content-between p-2 rounded-5 mt-3">
+                        <div class="day ms-3">
+                            <h6 id="DayoftheWeek" class="text-white-50 pt-2"></h6>
+                        </div>
+                        <div class="date me-3">
+                            <h6 id="DayoftheMonth" class="text-white-50 pt-2"></h6>
+                        </div>
+                    </div>
+
+                    <div class="contents ps-4 text-white">
+                        <h4 id="govName" class="text-white-50 mt-3"></h4>
+                        <h1 id="tempC"></h1>
+                        <p id="tempCondition" class="text-primary mt-3"></p>
+                        <img id="weatherIcon" class="w-25" src="" alt="">
+                    </div>
+
+                    <div class="forecast d-flex justify-content-around text-white mt-3 mb-3">
+                        <span class="d-flex align-items-center">
+                            <img src="image/icon-umberella.png" alt=""> 
+                            <h6 id="humidity" class="ps-3 mt-1"></h6>
+                        </span>
+
+                        <span class="d-flex align-items-center">
+                            <img src="image/icon-wind.png" alt="">
+                            <p id="wind"  class="ps-3 mt-3"></p>
+                        </span>
+
+                        <span class="d-flex align-items-center">
+                            <img src="image/icon-compass.png" alt=""> 
+                            <p id="winDir" class="ps-3 mt-3"></p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="forecastInfo2 col-lg-4 col-sm-12 text-center">
+                    <div class="header p-2 rounded-5  mt-3" id="second">
+                        <div class="day m-auto">
+                            <h6 id="tomorrowDay" class="text-white-50 pt-2"></h6>
+                        </div>
+                    </div>
+                    <div class="contents p-3 text-white pb-5 pt-5" id="seconds">
+                        <div class="icon">
+                            <img id="weatherIcon2" class="w-25 mb-4" src="" alt="">
+                        </div>
+                        <div class="degree">
+                            <h1 id="expMaxWeather"></h1>
+                            <h4 id="expMinWeather" class="fw-light"></h4>
+                            <p id="tempu" class="text-primary mt-4"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecastInfo col-md-4 col-sm-12 text-center">
+                    <div class="header p-2 rounded-5  mt-3">
+                        <div class="day m-auto">
+                            <h6 id="afterTomorrowDay" class="text-white-50 pt-2"></h6>
+                        </div>
+                    </div>
+                    <div class="contents p-3 text-white pb-5 pt-5">
+                        <div class="icon">
+                            <img id="weatherIcon3" class="w-25 mb-4" src="" alt="">
+                        </div>
+                        <div class="degree">
+                            <h1 id="expMaxWeather2"></h1>
+                            <h4 id="expMinWeather2" class="fw-light"></h4>
+                            <p id="tempu2" class="text-primary mt-4"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-end" >
+        <div class="input container w-75 pt-5 d-flex align-items-center position-relative">
+            <input type="text" placeholder="Enter your Email..." class="form form-control w-75 rounded-5 p-3 position-absolute ">
+            <input type="button" value="Subscribe" class="subscribe btn rounded-5 p-2 position-absolute">    
+        </div>
+
+        <div class="container w-75 mt-5 social-icons d-flex flex-nowrap">
+            <a href="" class="social-icon facebook btn text-primary">
+              <i class="fab fa-facebook-f d-flex justify-content-center align-items-center"></i>
+            </a>
+            <a href="" class="social-icon twitter btn text-primary">
+              <i class="fab fa-twitter d-flex justify-content-center align-items-center"></i>
+            </a>
+            <a href="" class="social-icon google-plus btn text-primary">
+              <i class="fab fa-google-plus-g d-flex justify-content-center align-items-center"></i> </a>
+            <a href="" class="social-icon pinterest btn text-primary">
+              <i class="fab fa-pinterest-p d-flex justify-content-center align-items-center"></i>
+            </a>
+        </div>
+
+        <div class="copyright container p-4 text-white-50 w-75">
+            <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection {
+    background-color: #82adbe; 
+    color: rgb(42, 42, 42);
+}
+body{
+    background-color: #1e202b;
+}
+.navbar .collapse .tabs a:hover{
+    color: #009ad8 !important; 
+}
+.content{
+    background-image: url("../image/background.png");
+    background-repeat: no-repeat;
+}
+.content .input .form{
+    background-color: #1e202b;
+    border: none;
+    color: white;
+}
+.content .input .form::placeholder{
+    color: rgb(119, 119, 119);
+}
+.content .input .btn{
+    width: 7%;
+    background-color: #009ad8;
+    color: white;
+    right: 10px;
+    transition: all 1s ease-in-out;
+}
+.content .input .btn:hover{
+    background-color: #047eae;
+}
+.header{
+    background-color: #2D303D;
+}
+.content-types .row{
+    background-color: #323544;
+}
+.content-types .contents #tempC{
+    font-size: 80px;
+}
+.content-types .contents h1{
+    font-size: 28px;
+}
+#second{
+    background-color: #222530;
+}
+.forecastInfo2{
+    background-color: #262936;
+}
+footer{
+    background-color:#323544 ;
+    margin-top: 100px;
+}
+.footer-end .input .form{
+    background-color: #1e202b;
+    border: none;
+    color: white;
+}
+.footer-end .input .form::placeholder{
+    color: rgb(119, 119, 119);
+}
+.footer-end .input .subscribe{
+    width: 10%;
+    background-color: #009ad8;
+    color: white;
+    transition: all 1s ease-in-out;
+    right: 25%;
+}
+.footer-end .input .subscribe:hover{
+    background-color: #047eae;
+}
+.footer-end .container i{
+    background-color: #262936;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+.footer-end .container i:hover{
+    background-color: #009ad8;
+    color: white;
+}
+@media screen and (max-width:900px) {
+    .content .input .btn{
+        width: 20%;
+    }
+    .footer-end .input .subscribe{
+        width: 20%;
+        font-size: 12px;
+    }
+}
